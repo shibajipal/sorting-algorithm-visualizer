@@ -23,7 +23,7 @@ export function merge_sort_animation(array) {
 
         while (i < n1 && j < n2) {
             
-            animations.push(["comparing", j, i]);
+            animations.push(["comparing", arr.indexOf(L[i]), arr.indexOf(R[j])]);
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 

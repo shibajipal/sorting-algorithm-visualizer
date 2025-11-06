@@ -46,8 +46,8 @@ export default function SortingVisualizer() {
 
   function bubble_sort(array){
     const base_color = "#00ff41";
-    const comparing_color = "#6aff8a";
-    const swapping_color = "#ff2d55";
+    const comparing_color = "#ff0000ff";
+    
     const sorted_color = "#ffe600";
    
   if (is_sorting) return;      // prevents double clicks
@@ -73,7 +73,7 @@ export default function SortingVisualizer() {
 
         else if (action === "swapping"){
           const [_, idx, new_height] = animation;
-          bars[idx].style.backgroundColor = swapping_color;
+          // bars[idx].style.backgroundColor = swapping_color;
           bars[idx].style.height = `${new_height * 3.5}px`;
 
 
@@ -105,9 +105,9 @@ export default function SortingVisualizer() {
     const bars = document.getElementsByClassName("array-bar");
 
     const base_color = "#00ff41";
-    const pivot_color = "blue";
-    const comparing_color = "#00aaff";
-    const swapping_color = "green";
+    const pivot_color = "#00aaff";
+    const comparing_color = "#ff0000ff";
+    
     const sorted_color = "#ffe600";
     
     animations.forEach((animation, index)=>{
@@ -135,7 +135,7 @@ export default function SortingVisualizer() {
 
         else if (action === "swapping"){
           const[_, idx, new_height] = animation;
-          bars[idx].style.backgroundColor = swapping_color;
+          // bars[idx].style.backgroundColor = swapping_color;
           bars[idx].style.height = `${new_height * 3.5}px`;
 
           setTimeout(() => {
@@ -163,8 +163,8 @@ export default function SortingVisualizer() {
 
     const base_color = "#00ff41";
     
-    const comparing_color = "#ff2d55";
-    const changing_color = "#00ff41";
+    const comparing_color = "#ff0000ff";
+ 
     const sorted_color = "#ffe600";
 
     animations.forEach((animation, index) =>{
@@ -185,7 +185,7 @@ export default function SortingVisualizer() {
 
         else if (action === "changing") {
           const [_, idx, new_height] = animation;
-          bars[idx].style.backgroundColor = changing_color;
+          
           bars[idx].style.height = `${new_height * 3.5}px`;
 
           setTimeout(() => {
