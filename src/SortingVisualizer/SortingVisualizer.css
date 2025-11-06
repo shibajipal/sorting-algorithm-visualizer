@@ -161,23 +161,27 @@ box-shadow: 4px 4px  0 0 #FFF;
 
   /* Remove the manual left shift on mobile */
   .array-container {
-    transform: none !important;
-    width: 100%;
-    padding-top: 100px;
+    height: 600px;
+    /* transform: none !important; */
+    width: 200%;
+    transform: translateX(-275px);
+    padding-top: 0px;
     align-items: center;
   }
 
   /* Bars must fit the screen */
   .bars {
-    width: 95vw;
-    height: 55vh;
-    max-width: 95vw;
-    overflow: hidden;
+    width: 500px;
+    height: 600px;
+    max-width: none;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 6px;
   }
 
   /* Button + slider panel moves below bars */
   .right-panel {
+    display: flex;
     margin-left: 0;
     width: 100%;
     align-items: center;
@@ -189,6 +193,7 @@ box-shadow: 4px 4px  0 0 #FFF;
   }
 
   .right-controls label {
+    padding-right: 300px;
     transform: none;
     margin: 0;
     width: auto;
@@ -197,12 +202,17 @@ box-shadow: 4px 4px  0 0 #FFF;
 
   /* Buttons become centered + full width */
   .button-column {
-    transform: none;
-    width: 100%;
-    align-items: center;
+    
+    
+    margin-top: -250px;
+    
+    transform: translateX(150px);
+    width: 200px;
+    align-items: right;
   }
 
   .button-column button {
+    
     width: 80%;
     max-width: 300px;
     font-size: 1.2rem;
