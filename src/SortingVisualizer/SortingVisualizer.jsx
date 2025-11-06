@@ -323,8 +323,7 @@ export default function SortingVisualizer() {
         </div>
       </div>
 
-    </div> {/* ✅ closes top-layout */}
-
+    </div> 
   </div>  
 );
 }

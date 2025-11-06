@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="zoom-wrapper">
+    <div className="restore-75">
       <SortingVisualizer />
     </div>
   );
