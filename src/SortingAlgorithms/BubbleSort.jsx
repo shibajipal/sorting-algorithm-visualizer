@@ -1,5 +1,5 @@
 // src/SortingVisualizer/SortingAlgorithms/BubbleSort.js
-export function bubble_sort_animation(array) {
+export function bubbleSortAnimation(array) {
   const animations = [];
   const arr = array.slice();
   // const sorted_array = [...arr].sort((a, b) => a - b); 

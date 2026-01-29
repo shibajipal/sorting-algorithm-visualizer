@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  
+
 }
 
 /* Main container */
@@ -24,36 +24,71 @@ body {
   align-items: left;
   gap: 20px;
   /* overflow-x: hidden; */
-  
-}
-/* Two columns: bars (left) + right panel (sliders + buttons) */
-.top-layout {
-  display: flex;
-  justify-content: center;   /* centers the pair as a unit */
-  align-items: flex-start;
-  gap: 8px;                 /* space between bars and right panel */
-  width: 100%;
-  
+
 }
 
-/* Bars box */
+/* Two columns: bars (left) + right panel (sliders + buttons) */
+.top-layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* centers the pair as a unit */
+  align-items: flex-start;
+  gap: 8px;
+  /* space between bars and right panel */
+  width: 100%;
+
+}
+
+/* Bars section wrapper */
+.bars-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
 .bars {
-  
+  position: relative;
   display: flex;
   align-items: flex-end;
   gap: 5px;
   height: 650px;
   width: 3000px;
-  max-width: none; 
-  
+  max-width: none;
+
   border: 2px solid rgb(255, 255, 255);
   border-radius: 14px;
   padding: 10px;
   overflow: hidden;
-               /* don’t let it collapse */
+  /* don’t let it collapse */
 
 }
 
+.legend {
+  position: absolute;
+  bottom: -60px;
+  left: 12px;
+  display: flex;
+  gap: 24px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-square {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.legend-text {
+  font-size: 24px;
+  color: #fff;
+}
 
 
 /* Right column wrapper */
@@ -61,7 +96,7 @@ body {
   margin-left: -50px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;     
+  align-items: stretch;
   gap: 24px;
   width: 600px;
   /* min-width: 240px;           */
@@ -78,7 +113,7 @@ body {
 }
 
 .right-controls label {
-  width:250px;
+  width: 250px;
   max-width: none;
   transform: translateX(70px);
   margin-right: -40px;
@@ -94,10 +129,10 @@ body {
   accent-color: rgb(47, 138, 53);
 }
 
-.button-column{
-  
+.button-column {
+
   align-items: right;
-  width:400px;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -106,8 +141,9 @@ body {
   /* padding-right: 14px; */
   padding-bottom: 14px;
 }
+
 .button-column button {
-  width:275px;
+  width: 275px;
   overflow: visible;
   align-items: center;
   justify-content: center;
@@ -116,7 +152,7 @@ body {
   padding: 8px 16px;
   font-size: 1.5rem;
   border-radius: 6px;
-  background : #0a0f0a;
+  background: #0a0f0a;
   color: rgb(48, 202, 58);
   box-shadow: 4px 4px 0 0 #FFF;
 
@@ -127,17 +163,18 @@ body {
 .button-column button:hover {
   background: #003B00;
 
-box-shadow: 4px 4px  0 0 #FFF;
- 
+  box-shadow: 4px 4px 0 0 #FFF;
+
 
   border-color: #00ff66;
-  color: #baffbf; /* slightly softer than full white-green */
+  color: #baffbf;
+  /* slightly softer than full white-green */
 
 }
 
 
-.header{
-  position:absolute;
+.header {
+  position: absolute;
   top: -10px;
   /* transform: translateY(10%); */
   /* padding-bottom: 10px; */
@@ -146,7 +183,7 @@ box-shadow: 4px 4px  0 0 #FFF;
   /* transform: translateX(-75%); */
   font-size: 45px;
   display: flex;
-  align-items:unset;
+  align-items: unset;
 }
 
 
@@ -202,17 +239,17 @@ box-shadow: 4px 4px  0 0 #FFF;
 
   /* Buttons become centered + full width */
   .button-column {
-    
-    
+
+
     margin-top: -250px;
-    
+
     transform: translateX(150px);
     width: 200px;
     align-items: right;
   }
 
   .button-column button {
-    
+
     width: 80%;
     max-width: 300px;
     font-size: 1.2rem;

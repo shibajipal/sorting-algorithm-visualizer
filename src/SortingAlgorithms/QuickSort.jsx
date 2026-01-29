@@ -1,4 +1,4 @@
-export function quick_sort_animation(array) {
+export function quickSortAnimation(array) {
   const animations = [];
   const arr = array.slice();
 
